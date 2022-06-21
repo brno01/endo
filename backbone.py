@@ -21,6 +21,3 @@ path = Path("C:\Vip\Oldfiles\Logs")
 path.mkdir(parents=True, exist_ok=True)
 path = Path("C:\Vip\Oldfiles\RegisteredClients")
 path.mkdir(parents=True, exist_ok=True)
-
-
-
