@@ -1,5 +1,7 @@
 import shutil
 import os
+import winreg
+
 from os import listdir
 from os.path import isfile, join, basename
 from pathlib import Path
@@ -27,7 +29,7 @@ if __name__ == "__main__":
     move("C:\Vip\DB", "C:\Vip\Oldfiles\DB")
     move("C:\Vip\Logs", "C:\Vip\Oldfiles\Logs")
     move("C:\Vip\RegisteredClients", "C:\Vip\Oldfiles\RegisteredClients")
-if 
+
 shutil.rmtree("C:\Vip\Clients")
 shutil.rmtree("C:\Vip\DB")
 shutil.rmtree("C:\Vip\Logs")
@@ -40,3 +42,7 @@ os.rmdir("C:\Vip\RegisteredClients")
 
 dirPath = r"C:\Vip"
 os.remove('libeay32.dll');('pmtg.dll');('ssleay32.dll');('VipSQLite.exe');('VipSQLite.map');('bugreport.txt');('LogErroDetalhado.txt')
+
+Key_Name = r'Software\ClubPetro'
+key = winreg.OpenKey(winreg.HKEY_CURRENT_USER, Key_Name, 0, winreg.KEY_ALL_ACCESS)
+winreg.DeleteKey(key, '')
